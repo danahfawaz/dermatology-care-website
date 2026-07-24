@@ -39,23 +39,26 @@ login-signup.html
 old-history.html
 old-history.php
 update.php
+```
 
-How to Run the Project
-Download or clone the repository.
-Move the project folder into the XAMPP htdocs folder.
-Start Apache and MySQL from the XAMPP Control Panel.
-Open phpMyAdmin.
+## How to Run the Project
 
-Create a database named:
-dermatology_db
-
-Import the dermatology_db.sql file.
-
-Open the project through:
+1. Download or clone the repository.
+2. Move the project folder into the XAMPP htdocs folder.
+3. Start Apache and MySQL from the XAMPP Control Panel.
+4. Open phpMyAdmin.
+5. Create a database named dermatology_db.
+6. Import the dermatology_db.sql file.
+7. Open the project through:
+ ```text
 http://localhost/dermatology-care-website/
+```
 
+## Project Status
 
-Contributors
+This is an academic prototype developed for learning and portfolio purposes. All clinic and appointment records are fictional sample data used only to demonstrate the website’s functionality.
 
-Hoor Fawaz (https://github.com/hoorfawaz)⁠
-Danah Fawaz (https://github.com/danahfawaz)⁠
+## Contributors
+
+- [Danah Fawaz](https://github.com/danahfawaz)
+- [Hoor Fawaz](https://github.com/hoorfawaz)
