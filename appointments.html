@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dermatology Care - Book Appointment</title>
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+
+<header>
+    <h1>Dermatology Care</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="login-signup.html">Register/Login</a>
+        <a href="doctors.html">Doctors</a>
+        <a href="appointments.html">Book Appointment</a>
+        <a href="old-history.php">Appointment History</a>
+    </nav>
+</header>
+
+<main class="container">
+    <h2>Appointment Booking</h2>
+    <p>If you are suffering from skin problems, fill in the form below to book your appointment.</p>
+
+    <form action="insert.php" method="post" onsubmit="return validateForm()">
+
+        <label for="patientname">Patient Name</label>
+        <input type="text" id="patientname" name="patientname" placeholder="Enter patient name">
+
+        <label for="doctor">Choose Doctor</label>
+        <select id="doctor" name="doctor">
+            <option value="">Select a doctor</option>
+            <option>Dr. Danah Fawaz</option>
+            <option>Dr. Hoor Fawaz</option>
+            <option>Dr. Khalid</option>
+            <option>Dr. Mazen</option>
+        </select>
+
+        <label for="condition">Skin Condition</label>
+        <select id="condition" name="skincondition">
+            <option value="">Select condition</option>
+            <option>Brown acne</option>
+            <option>Red acne</option>
+            <option>Rosacea</option>
+        </select>
+
+        <label for="date">Appointment Date</label>
+        <input type="date" id="date" name="appointment_date">
+
+        <label for="time">Appointment Time</label>
+        <input type="time" id="time" name="appointment_time">
+
+        <label for="notes">Notes</label>
+        <textarea id="notes" name="notes" rows="4" placeholder="Write your notes here"></textarea>
+
+        <button type="submit">Book Appointment</button>
+    </form>
+</main>
+
+<footer>
+    <p>Your skin deserves the best care 💜 </p>
+</footer>
+
+<script>
+function validateForm() {
+  var errors = "";
+
+  var name = document.getElementById("patientname").value;
+  var doctor = document.getElementById("doctor").value;
+  var condition = document.getElementById("condition").value;
+  var date = document.getElementById("date").value;
+  var time = document.getElementById("time").value;
+
+  if (name == "") {
+    errors += "- Patient name is required\n";
+  }
+
+  if (doctor == "") {
+    errors += "- Please choose a doctor\n";
+  }
+
+  if (condition == "") {
+    errors += "- Please choose a skin condition\n";
+  }
+
+  if (date == "") {
+    errors += "- Please select an appointment date\n";
+  }
+
+  if (time == "") {
+    errors += "- Please select an appointment time\n";
+  }
+
+  if (errors != "") {
+    alert(errors);
+    return false;
+  }
+
+  alert("Appointment booked successfully 💜");
+  return true;
+}
+</script>
+
+</body>
+</html>
